@@ -1,0 +1,273 @@
+:root {
+    font-family: "Fredoka", sans-serif;
+    font-synthesis: none;
+
+    --yellow: #faf9be;
+    --purple: rgb(229, 218, 245);
+    --blue: #9daeee;
+    --red: #ee9dc9;
+    --green: #b1e7a5ff;
+}
+
+.floating-star {
+    width: 84px;
+    height: 84px;
+
+    object-fit: contain;
+    position: absolute;
+}
+
+.token.operator {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+pre[class*="language-"] {
+    line-height: 1 !important;
+    border-radius: 4px;
+    background-color: #e8eff4 !important;
+}
+
+pre[class*="language-"]::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 4px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-track {
+    background: rgb(195, 183, 231);
+    border-radius: 4px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+    background: rgb(169, 148, 233);
+    border-radius: 4px;
+}
+
+pre[class*="language-"]::-webkit-scrollbar-thumb:hover {
+    background: rgb(137, 111, 217);
+}
+
+.library-scrollable {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.capability-content {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button {
+    text-align: center;
+    padding: 8px;
+    z-index: 2;
+    width: calc(max-content + 20px);
+    background-color: var(--blue);
+    border-radius: 4px;
+    border: 2px dashed rgba(0, 0, 0, 0.42);
+
+    transition: background-color 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--red);
+}
+
+.quick-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    margin-top: 8px;
+    width: 100%;
+}
+
+.content {
+    position: relative;
+    overflow: hidden;
+
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1318px;
+    min-height: calc(100vh);
+    background-color: var(--purple);
+    border-radius: 6px;
+    z-index: 2;
+    background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 31px, rgba(0, 0, 0, 0.08) 32px);
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    width: 1px;
+    background-color: rgba(115, 100, 255, 0.38);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pancakes {
+    text-align: center;
+    font-size: 28px;
+}
+
+.article {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+strong {
+    font-size: 18px;
+    padding: 2px;
+}
+
+h3 {
+    margin: auto;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h2 {
+    margin: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.content-container-description {
+    text-align: center;
+}
+
+.content-container hr {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.12);
+    border: 1px solid;
+}
+
+.content-container {
+    background-color: var(--yellow);
+    padding: 16px;
+    border-radius: 4px;
+    border: 2px dashed rgba(0, 0, 0, 0.42);
+    min-width: 200px;
+}
+
+.content-safe-display {
+    z-index: 3;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    min-width: 70%;
+}
+
+.content-header-text {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 4px;
+    text-align: center;
+}
+
+.content-header-icon {
+    height: 170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+.floating-stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.floating-star {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    font-size: 20px;
+    user-select: none;
+    will-change: transform;
+}
+
+body {
+    background-color: var(--blue);
+}
+
+a {
+    text-decoration: none;
+    color: #3b3b3e;
+}
+
+.quote-mark {
+    position: relative;
+    font-size: 40px;
+}
+
+.topbar {
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(12px);
+    background-color: rgb(226, 236, 255);
+    border-radius: 4px;
+}
+
+.topbar-inner {
+    height: 100%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.topnav {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.topnav a {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .topnav {
+        margin-left: auto;
+        display: none;
+    }
+
+    .header-actions {
+        display: none;
+    }
+}

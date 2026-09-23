@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>Meowtsun - Tooling Developer</title>
+        <link rel="icon" type="image/png" href="../assets/icon.png" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" />
+        <link
+            rel="stylesheet"
+            accesskey=""
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a class="brand">
+                    <img class="icon" src="../assets/icon.png" />
+                    <b style="font-family: &quot;Changa One&quot;, sans-serif">Meowtsun</b>
+                    <div style="display: contents; font-size: 13px">- Tooling Developer</div>
+                </a>
+
+                <nav class="topnav">
+                    <a href="#libraries">Libraries</a>
+                    <a href="#capabilities">Skills</a>
+                    <a href="#about">About</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a target="_blank" href="https://github.com/Meowtsun"><b>Github</b></a>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="article">
+                <img class="content-header-icon" src="../assets/icon.png" />
+                <h1 class="content-header-text">Meowtsun</h1>
+                <p class="content-header-text">Creative · Simple · Tooling · Backend</p>
+            </div>
+            <div class="content-safe-display">
+                <div class="content-container" style="padding-bottom: 2px">
+                    <h2>👋 What do I do?</h2>
+                    <hr />
+                    <p class="content-container-description">
+                        I make tools that stop you from fighting your code<br />
+                        opinionated, strongly typed and built with care<br />
+                    </p>
+                    <div class="pancakes">🥞</div>
+                    <p class="content-container-description">have this pancake while you're reading</p>
+                </div>
+
+                <div class="quick-buttons">
+                    <a class="button" href="#libraries"> Selected Libraries → </a>
+                    <a class="button" target="_blank" href="https://www.roblox.com/users/890254125/profile">
+                        Roblox ↗</a
+                    >
+                    <a class="button" target="_blank" href="https://github.com/Meowtsun"> Github ↗</a>
+                </div>
+
+                <hr style="border: 1px dashed rgba(0, 0, 0, 0.42)" />
+                <div class="content-container" style="margin-top: 24px; background-color: rgb(223, 191, 232)">
+                    <h2 id="capabilities">📌 Capabilities</h2>
+                    <hr />
+                    <p class="content-container-description">
+                        while I'm more oriented toward tooling, my general capabilities can still cover a lot of
+                        fields<br />
+                        I can do a lot of things!
+                    </p>
+                    <div class="capability-content">
+                        <div class="content-container" style="background-color: var(--red); width: 40%">
+                            <h3>💻 Backend-related</h3>
+                            <hr />
+                            I’ve worked on multiple small commissions before!<br />
+                            As a result, I can design system architectures <br />
+                            that are friendly to a developer’s sanity! <br />
+                        </div>
+                        <div class="content-container" style="background-color: var(--blue); width: 40%">
+                            <h3>📚 Teaching</h3>
+                            <hr />
+                            And I have experience teaching people as well!<br />
+                            Building systems gives me to strong insight<br />
+                            of the fundementals requirements<br />
+                        </div>
+
+                        <div class="content-container" style="background-color: var(--yellow); width: 40%">
+                            <h3>🎨 Frontend-light</h3>
+                            <hr />
+                            While I'm not super strong with Vide / Fluid and other frontend things, I can still make UIs
+                            that feel pleasant to use
+                        </div>
+
+                        <div class="content-container" style="background-color: var(--green); width: 40%">
+                            <h3>🔧 Libraries and Tooling</h3>
+                            <hr />
+                            My strongest domain!, I make tools that are simple
+                            <strong style="font-weight: 500">for developer</strong> to use, hiding annoying ceremony and
+                            help you make less mistake!
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border: 1px dashed rgba(0, 0, 0, 0.42)" />
+                <div class="content-container" style="margin-top: 24px">
+                    <h2 id="libraries">✨ Featured Libraries</h2>
+                    <hr />
+                    <div class="capability-content">
+                        <div
+                            class="content-container"
+                            style="background-color: var(--green); width: 86%; margin: 0 auto 0 auto">
+                            <strong style="font-weight: 500; font-size: 18px">💬 Sceny - Reinventing Dialogues</strong>
+                            <hr />
+                            <br />
+                            <div
+                                class="content-container-description"
+                                style="padding-top: 4px; font-size: 16px; font-weight: 390">
+                                Don't dialogues system contain more words that's not actually a dialogues?, What if
+                                there was.. none?
+                            </div>
+                            <br />
+
+                            <div class="library-display">
+                                <div class="library-scrollable">
+                                    <pre class="cms-code">
+<code class="language-lua" style="tab-size: 3; font-size: 12px;">--demo.lua
+local system = character "System" {};
+local you = character "You" {};
+
+local counting = scene {
+
+	scripts(function(content) 
+		if content.get("count") &gt;= 10 then
+			return leave()
+		end
+	end);
+    
+	system "counting.. $[count]";
+	state.increment "count";
+    
+	reread();
+}
+
+
+local sendevent = scene {
+
+	system "I can also send values back";
+	you "To where?";
+    
+	system "To parser that you're going to use!";
+	you "so I can get values from these dialogues?";
+	system "Yes!, like this";
+    
+	event(state.get("count"));
+
+	you "That's useful, can I have tables?";
+	system "Why not?, just maybe don't nest them";
+	you "Why?";
+	system "Predictability";
+	you "I see";
+    
+	event({
+		count = state.get("count")
+	});
+	
+	system "There's also state.map and state.derived!";
+    
+	state.derived 'derived' (function(content)
+		return content.get('count') * 2
+	end);
+	
+	state.map 'map' (function(content)
+		return content.get('count') + 2
+	end);
+	
+	you "What's the difference?";
+	system "derived changes as state changes, but map doesn't!";
+	system "map has to be explicitly re-read again!";
+	
+	system "we can also attach metadata!";
+    system "only to questions and answers though";
+	you "metadata?";
+    
+	system "Yes!, let me build example question" {
+		system "This is answer 1" {
+			meta({
+				isVisible = state.get('this_answer_id_visible')
+			})
+		}
+	};
+	
+	system "It doesn't do anything by itself";
+    your "but it give runtime information";
+	system "Yes, right to your parser!";
+	you "I see";
+}
+
+local morescene = scene {
+	system "Exactly!";
+	system "but I can also repeat things";
+	you "Repeat things?";
+    
+	system "Yes, for example, Let me count from 1 to 10";
+	system "I'm going to start from 1";
+    
+	state.set "count" (1);
+	counting();
+	sendevent();
+}
+
+local declined = scene {
+	system "Too bad! I'm going to explain anyway";
+	you "Alright..";
+}
+
+local introduction = scene {
+
+	system "Hello this is Sceny demo";
+	system "This look cool isn't it?";
+	system "I'm taking right now!";
+    
+	system "I can also ask you questions";
+	system "Is this cool?" {
+		you "It is!";
+		you "No" {
+			declined();
+		};
+	};
+
+	system "Nice! guess else I can do?" {
+		you "Making more scenes?" {
+			morescene();
+		};
+	};
+
+	system "And I can come back to here too as scene is ended!";
+	you "This look like programming language";
+	system "It does!";
+    
+	you "What if I don't want to comeback?";
+	system "Then you use goto!, It's just like require()!";
+	system "Reminding that goto will reset all state";
+	you "Why?";
+    
+	system "I treated as previous conversation is ended";
+	you "I see, How do you use it though?";
+	system "Like this!";
+
+	goto './Other_Module';
+}
+
+return introduction</code>
+</pre>
+                                </div>
+                            </div>
+                            <div
+                                class="content-container content-container-description"
+                                style="
+                                    background-color: #cfffc3ff;
+                                    padding: 2px !important;
+                                    font-size: 16px;
+                                    font-weight: 380;
+                                    border: none;
+                                ">
+                                <p>
+                                    Sceny is a small language for building interactive scenes <br />
+                                    Conversations, choices, events, and story flow <br />
+
+                                    can all be written together in one place!
+                                </p>
+                            </div>
+                            <div class="quick-buttons">
+                                <a class="button" target="_blank" href="https://github.com/Meowtsun/Sceny">
+                                    View on Github ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="content-container"
+                            style="background-color: var(--purple); width: 86%; margin: 0 auto 0 auto">
+                            <strong style="font-weight: 500; font-size: 18px"
+                                >💰 LootSet - Reimagining LootTable</strong
+                            >
+                            <hr />
+                            <br />
+                            <div
+                                class="content-container-description"
+                                style="padding-top: 4px; font-size: 16px; font-weight: 390">
+                                Why map your config so LootTable understands it?<br />
+                                What if your LootTable can just.. know how to read weight?<br />
+                                from you telling it how to do so, of course
+                            </div>
+                            <br />
+                            <div class="library-display">
+                                <div class="library-scrollable">
+                                    <pre class="cms-code">
+<code class="language-lua" style="tab-size: 3; font-size: 12px;">--demo.lua
+local config = {
+    item1 = {
+        weight = 10;
+        data = {...}
+    },
+    
+    item2 = {
+        weight = 10;
+        data = {...}
+    },
+}
+
+-- optional
+local function filter(key, value)
+    return true
+end
+
+local lootSet = LootSet.from(config, '@item/weight', filter)
+local luck = 0 -- optional
+
+local name, item = lootset:roll(luck)
+lootset:sample(100, luck) -- prints to output
+</code>
+</pre>
+                                </div>
+                                <div
+                                    class="content-container content-container-description"
+                                    style="
+                                        background-color: #f4eaffff;
+                                        padding: 2px !important;
+                                        font-size: 16px;
+                                        font-weight: 380;
+                                        border: none;
+                                    ">
+                                    <p>
+                                        LootSet is used to roll random items from luck and weight<br />
+                                        but instead of making new tables manually or writing<br />
+                                        your item table in a very specific way every single time<br />
+                                        What if you just.. tell your LootSet how to read your items?
+                                    </p>
+                                </div>
+                                <div class="quick-buttons">
+                                    <a class="button" target="_blank" href="https://github.com/Meowtsun/LootSet">
+                                        View on Github ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="content-container"
+                            style="background-color: var(--green); width: 86%; margin: 0 auto 0 auto">
+                            <strong style="font-weight: 500; font-size: 18px"
+                                >📑 EmbedMaker - I can also just.. do it</strong
+                            >
+                            <hr />
+                            <br />
+                            <div
+                                class="content-container-description"
+                                style="padding-top: 4px; font-size: 16px; font-weight: 390">
+                                Discordjs embedbuilder made in luau for developdment<br />
+                                Beautiful usages and features still feel familiar!<br />
+                                You can now easily build discord embeds for webhooks!
+                            </div>
+                            <br />
+                            <div class="library-display">
+                                <div class="library-scrollable">
+                                    <pre class="cms-code">
+<code class="language-lua" style="tab-size: 3; font-size: 12px;">--demo.lua
+local FooterBuilder = EmbedMaker.FooterBuilder
+local FieldBuilder = EmbedMaker.FieldBuilder
+
+local embed = EmbedMaker.new()
+    :SetTitle("Hello World")
+    :SetDescription("This is a description")
+    :SetColor(Color3.fromRGB(255, 0, 0))
+    :AddFields(
+        FieldBuilder.new()
+            :SetName("Field1")
+            :SetValue("Value1")
+            :SetInline(true)
+        ,
+        FieldBuilder.new()
+            :SetName("Field2")
+            :SetValue("Value2")
+        ,
+        -- providing table also works ofc
+        {name = "Field3", value = "Value3"}
+    )
+    :SetFooter(
+       FooterBuilder.new()
+        :SetText("This is a footer text")
+    )
+
+local json = embed:ToJSON()
+print(json)
+</code>
+</pre>
+                                </div>
+                            </div>
+                            <div class="quick-buttons">
+                                <a class="button" target="_blank" href="https://github.com/Meowtsun/EmbedMaker">
+                                    View on Github ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border: 1px dashed rgba(0, 0, 0, 0.42)" />
+                <div class="content-container" style="margin-top: 24px; background-color: rgb(223, 191, 232)">
+                    <h2>📦 Why so many libraries?</h2>
+                    <hr />
+                    <p class="content-container-description">
+                        If you check my repository, you'll find a few more libraries <br />
+                        Some of them even have their own documentation websites <br />
+                        <br />
+
+                        While I know there are already so many great tools out there, <br />
+                        I still have fun making my own. I'm eager to learn new things! <br />
+                        <br />
+
+                        I also really believe that strong typing is important <br />
+                        Some of my recent work even has fully typed APIs! <br />
+                        <br />
+
+                        I build what I want to use, and what I want to learn!
+                    </p>
+                </div>
+                <div class="quick-buttons">
+                    <button class="button add-sparkles">✨ Add Sparkles</button>
+                </div>
+
+                <hr style="border: 1px dashed rgba(0, 0, 0, 0.42)" />
+                <div class="content-container" style="margin-top: 24px">
+                    <h2 id="about">🐈 About me</h2>
+                    <hr />
+                    <div class="content-container" style="background-color: var(--green)">
+                        I'm Meowtsun, a developer who really likes making things<br />
+                        <br />
+                        I mostly work with Luau and Roblox, usually somewhere between game systems, backend, and
+                        tooling<br />
+                        <br />
+
+                        I generally capable of doing everything from frontend to backend<br />
+                        although the thing I'm best at by far is developer experience<br />
+                        <br />
+
+                        I also like figuring out how things could work differently,<br />
+                        then.. sometimes turning that idea into a library or weird QoL<br />
+                        that is unusual for a game<br />
+                        <br />
+
+                        I care a lot about player &amp; developer experience, strong typing, and making complicated
+                        things feel simple to use<br />
+                    </div>
+
+                    <p class="content-container-description">(And apparently, I also like putting cats everywhere)</p>
+                </div>
+
+                <div class="quick-buttons">
+                    <a class="button" target="_blank" href="https://discord.com/users/367506824414494720">Discord ↗</a>
+                    <a class="button" target="_blank" href="https://github.com/Meowtsun"> Github ↗</a>
+                    <a class="button" target="_blank" href="https://www.roblox.com/users/890254125/profile"
+                        >Roblox ↗</a
+                    >
+                </div>
+
+                <div class="footer" style="padding-bottom: 16px"></div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lua.min.js"></script>
+        <script>
+            document.querySelectorAll('code[class*="language-"]').forEach((element) => {
+                Prism.highlightElement(element);
+            });
+        </script>
+
+        <div class="floating-stars" aria-hidden="true">
+            <img class="floating-star star-template" src="../assets/Sparkle.png" />
+            <img class="floating-star moon" src="../assets/Moon.png" />
+        </div>
+
+        <script>
+            const MAX_ROTATION_SPEED = 0.3;
+            const ROTATION_SPEED = 1;
+
+            const MAX_SPEED = 0.3;
+            const SPEED = 0.2;
+
+            const REPEL_RADIUS = 120;
+            const REPEL_BURNOUT = 0.024;
+            const STAR_MULTIPLIER = 0.02;
+
+            const ORBIT_SPEED = 1;
+            const ORBIT_RADIUS = 160;
+            let star_count = 8;
+            let cursor = null;
+
+            const Stars = [...document.querySelectorAll(".floating-star")];
+            const States = Stars.map((star) => ({
+                element: star,
+                isAMoon: star.classList.contains("moon"),
+
+                position: {
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight
+                },
+
+                velocity: {
+                    x: (Math.random() * 2 - 1) * SPEED,
+                    y: (Math.random() * 2 - 1) * SPEED
+                },
+
+                rotation: {
+                    value: Math.random() * 360,
+                    speed: ROTATION_SPEED
+                }
+            }));
+
+            function addSparkles(_, dont_multiply) {
+                const template = document.querySelector(".star-template");
+                let value = Math.ceil(star_count * STAR_MULTIPLIER);
+
+                if (dont_multiply) {
+                    value = 1;
+                } else {
+                    star_count += value;
+                }
+
+                for (let n = 0; n < value; n++) {
+                    const star = template.cloneNode(true);
+                    document.querySelector(".floating-stars").appendChild(star);
+                    States.push({
+                        element: star,
+
+                        position: {
+                            x: Math.random() * window.innerWidth,
+                            y: Math.random() * window.innerHeight
+                        },
+
+                        velocity: {
+                            x: (Math.random() * 2 - 1) * SPEED,
+                            y: (Math.random() * 2 - 1) * SPEED
+                        },
+
+                        rotation: {
+                            value: Math.random() * 360,
+                            speed: ROTATION_SPEED
+                        }
+                    });
+                }
+            }
+
+            for (let n = 1; n < star_count - 1; n++) {
+                addSparkles(null, true);
+            }
+
+            function updateCursorPosition(event) {
+                cursor = {
+                    x: event.clientX,
+                    y: event.clientY
+                };
+            }
+
+            window.addEventListener("pointermove", updateCursorPosition);
+            window.addEventListener("pointerdown", updateCursorPosition);
+            document.querySelector(".add-sparkles").addEventListener("click", addSparkles);
+
+            function bounceFromEdges(star, height, width) {
+                if (star.position.x < 0) {
+                    star.position.x = 0;
+                    star.velocity.x *= -1;
+                }
+
+                if (star.position.x > width) {
+                    star.position.x = width;
+                    star.velocity.x *= -1;
+                }
+
+                if (star.position.y < 0) {
+                    star.position.y = 0;
+                    star.velocity.y *= -1;
+                }
+
+                if (star.position.y > height) {
+                    star.position.y = height;
+                    star.velocity.y *= -1;
+                }
+            }
+
+            function whyAreWeRotatingItTooHelp(star) {
+                star.rotation.value += star.rotation.speed;
+            }
+
+            // name not really accurate now, but I'm having fun so not gonna think about it
+            function moveAwayFromCursor(star, now) {
+                if (cursor) {
+                    let direction_x = star.position.x - cursor.x;
+                    let direction_y = star.position.y - cursor.y;
+                    const distance = Math.hypot(direction_x, direction_y);
+
+                    if (star.isAMoon) {
+                        if (distance < ORBIT_RADIUS && distance > 0) {
+                            const orbit_speed = (distance / REPEL_RADIUS) * ORBIT_SPEED;
+
+                            const orbit_x = star.position.x - cursor.x;
+                            const orbit_y = star.position.y - cursor.y;
+
+                            const tangent_x = -orbit_y;
+                            const tangent_y = orbit_x;
+
+                            const length = Math.hypot(tangent_x, tangent_y);
+
+                            star.velocity.x = (tangent_x / length) * orbit_speed;
+                            star.velocity.y = (tangent_y / length) * orbit_speed;
+                        }
+
+                        return false;
+                    }
+
+                    if (distance < REPEL_RADIUS && distance > 0) {
+                        const strength = (1 - distance / REPEL_RADIUS) * MAX_SPEED;
+                        star.velocity.x += (direction_x / distance) * strength;
+                        star.velocity.y += (direction_y / distance) * strength;
+                        star.rotation.speed += (distance / REPEL_RADIUS) * MAX_ROTATION_SPEED;
+                        return true;
+                    }
+                    return false;
+                }
+            }
+
+            function applyTransformation(star) {
+                star.element.style.transform = `translate(${star.position.x}px, ${star.position.y}px) rotate(${star.rotation.value}deg)`;
+            }
+
+            function updateStars(now) {
+                const height = window.innerHeight;
+                const width = window.innerWidth;
+
+                for (const star of States) {
+                    star.position.x += star.velocity.x;
+                    star.position.y += star.velocity.y;
+
+                    bounceFromEdges(star, height, width);
+                    whyAreWeRotatingItTooHelp(star);
+
+                    const repelled = moveAwayFromCursor(star, now);
+                    if (!repelled) {
+                        // burn out the speed until reaching minimum
+                        for (const axis of ["x", "y"]) {
+                            if (Math.abs(star.velocity[axis]) > SPEED) {
+                                star.velocity[axis] *= 1 - REPEL_BURNOUT;
+                            }
+                        }
+                        // for rotation
+                        if (Math.abs(star.rotation.speed) > ROTATION_SPEED) {
+                            star.rotation.speed *= 1 - REPEL_BURNOUT;
+                        }
+                    }
+                    applyTransformation(star);
+                }
+
+                requestAnimationFrame(updateStars);
+            }
+
+            updateStars();
+        </script>
+    </body>
+</html>
